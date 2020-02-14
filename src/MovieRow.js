@@ -3,7 +3,7 @@ import React from 'react'
 
 class MovieRow extends React.Component {
     render() {
-        return  <table key={this.props.movie.id}>
+        return  <table className="movierow" key={this.props.movie.id}>
         <tbody>
           <tr>
             <td>

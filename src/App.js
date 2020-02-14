@@ -29,12 +29,12 @@ class App extends Component {
 
   performSearch(searchTerm) {
     console.log("Perform search using moviedb")
-    const urlString = "url&query" +
+    const urlString = "https://api.themoviedb.org/3/search/movie?api_key=e93798dcf27c2ec7429e086923b41287&query=" + searchTerm
     $.ajax({
       url: urlString,
       success: (searchResults) => {
         console.log("Fetched data successfully")
-        //console.log(searchResults)
+        console.log(searchResults) 
         const results = searchResults.results
         //console.log(results[0])
 
@@ -42,8 +42,8 @@ class App extends Component {
         let movieRows = []
 
         results.forEach((movie) => {
-          movie.poster_src = "" + movie.poster_path
-          //console.log(movie.poster_path)
+          movie.poster_src = "https://image.tmdb.org/t/p/w185" + movie.poster_path
+          console.log(movie.poster_path)
           const movieRow = <MovieRow key={movie.id} movie={movie}/>
           movieRows.push(movieRow)
         })
@@ -66,7 +66,7 @@ class App extends Component {
       return (
       <div>
         
-        <table class="header">
+        <table className="header">
           <tbody>
             <tr>
               <td>
