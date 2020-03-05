@@ -7,7 +7,7 @@ Check out the <a href="http://tcullingham.bcitwebdeveloper.ca/movie-db/index.htm
 <h2>Languages Used</h2>
 <ul>
   <li>HTML5</li>
-  <li>CSS3</li>
+  <li>Sass</li>
   <li>JSX</li>
   <li>React</li>
 </ul>
